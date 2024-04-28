@@ -62,7 +62,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(LER,20221210.1)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(LER,20221210.3)" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -441,7 +441,7 @@
  *
  *  Analog Thermistors - 4.7kΩ pullup - Normal
  *  -------
- *     1 : 100kΩ  EPCOS - Best choice for EPCOS thermistors
+ *     1 : 100kΩ  EPCOS - Best choice for EPCOS thermistors   mic6 no 20221210.2
  *   331 : 100kΩ  Same as #1, but 3.3V scaled for MEGA
  *   332 : 100kΩ  Same as #1, but 3.3V scaled for DUE
  *     2 : 200kΩ  ATC Semitec 204GT-2
@@ -518,7 +518,7 @@
 #define TEMP_SENSOR_5 0
 #define TEMP_SENSOR_6 0
 #define TEMP_SENSOR_7 0
-#define TEMP_SENSOR_BED 1
+#define TEMP_SENSOR_BED 11     //  ler 20221210.3
 #define TEMP_SENSOR_PROBE 0
 #define TEMP_SENSOR_CHAMBER 0
 #define TEMP_SENSOR_COOLER 0
@@ -1745,7 +1745,7 @@
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
 //#define AUTO_BED_LEVELING_BILINEAR
-//#define AUTO_BED_LEVELING_UBL
+#define AUTO_BED_LEVELING_UBL     //  ler 20221210.2
 //#define MESH_BED_LEVELING
 
 /**
@@ -1945,7 +1945,7 @@
  * - Allows Z homing only when XY positions are known and trusted.
  * - If stepper drivers sleep, XY homing may be required again before Z homing.
  */
-//#define Z_SAFE_HOMING
+#define Z_SAFE_HOMING       //  ler 20221210.2
 
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE - 10) / 2)    // X point for Z homing
